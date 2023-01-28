@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link , useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -15,7 +15,7 @@ export default function Signup() {
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
-        const response = await fetch("https://mern-bro-food-backend.vercel.app/api/createuser",{
+        const response = await fetch("http://localhost:5000/api/createuser",{
             method:'POST',
             headers :{
                 'content-Type':'application/json',
@@ -38,7 +38,7 @@ export default function Signup() {
     const onchange = (event) =>{
         setcredentials({...credentials,[event.target.name]:event.target.value})
     }
-    const navigate = useNavigate();
+
     
   return (
     <>

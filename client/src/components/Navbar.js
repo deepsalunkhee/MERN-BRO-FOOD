@@ -17,7 +17,7 @@ export default function Navbar() {
       const [cartView,setCartView] = useState(false);
   return (
     <div>
-     <nav class="navbar navbar-expand-lg navbar-light bg-success">
+     <nav class="navbar navbar-expand-lg navbar-light bg-warning">
   <Link className="navbar-brand" to="/"><h2>BroFood</h2></Link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

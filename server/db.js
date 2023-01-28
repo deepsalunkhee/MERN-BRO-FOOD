@@ -1,8 +1,11 @@
 const mongoose=require('mongoose');
-const MongoURL='mongodb+srv://Deep:Deep123@cluster0.nowues7.mongodb.net/BroFood?retryWrites=true&w=majority';
+require('dotenv').config();
+const MONGODBURL=process.env.MONGO_URL;
+console.log(process.env.MONGO_URL)
+
 mongoose.set('strictQuery', true);
 const mongoDB= async ()=>  {
-   await mongoose.connect(MongoURL,{useNewUrlParser:true},async (err,result)=>{
+   await mongoose.connect(MONGODBURL,{useNewUrlParser:true},async (err,result)=>{
     if(err) console.log("---",err)
     else{
      console.log(`Connected to DataBase`);   

@@ -21,7 +21,7 @@ export default function Cart() {
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
     // console.log(data,localStorage.getItem("userEmail"),new Date())
-    let response = await fetch("https://mern-bro-food-backend.vercel.app/api/orderData", {
+    let response = await fetch("http://localhost:5000/api/orderData", {
      
       method: 'POST',
       headers: {
@@ -70,7 +70,7 @@ export default function Cart() {
         </table>
         <div><h1 className='fs-2'>Total Price: {totalPrice}/-</h1></div>
         <div>
-          <button className='btn bg-success mt-5 ' onClick={handleCheckOut} > Check Out </button>
+          <button className='btn bg-warning mt-5 ' onClick={handleCheckOut} > Check Out </button>
         </div>
       </div>
 

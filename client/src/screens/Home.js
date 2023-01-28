@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
-import Carousal from "../components/Carousal";
+
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -10,7 +10,7 @@ export default function Home() {
   const [search, setSearch] = useState("");
 
   const loadData = async () => {
-    let response = await fetch("https://mern-bro-food-backend.vercel.app/api/foodData", {
+    let response = await fetch("http://localhost:5000/api/foodData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
