@@ -15,7 +15,7 @@ export default function Signup() {
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/createuser",{
+        const response = await fetch("https://mern-bro-food-backend.vercel.app/api/createuser",{
             method:'POST',
             headers :{
                 'content-Type':'application/json',
